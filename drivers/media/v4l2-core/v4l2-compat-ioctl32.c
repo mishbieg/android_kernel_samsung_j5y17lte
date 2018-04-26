@@ -126,6 +126,7 @@ static inline int get_v4l2_vbi_format(struct v4l2_vbi_format *kp, struct v4l2_vb
 	return 0;
 }
 
+<<<<<<< HEAD
 static inline int put_v4l2_vbi_format(struct v4l2_vbi_format *kp, struct v4l2_vbi_format __user *up)
 {
 	if (copy_to_user(up, kp, sizeof(struct v4l2_vbi_format)))
@@ -143,6 +144,11 @@ static inline int get_v4l2_sliced_vbi_format(struct v4l2_sliced_vbi_format *kp, 
 static inline int put_v4l2_sliced_vbi_format(struct v4l2_sliced_vbi_format *kp, struct v4l2_sliced_vbi_format __user *up)
 {
 	if (copy_to_user(up, kp, sizeof(struct v4l2_sliced_vbi_format)))
+=======
+	if (get_user(kclips, &kp->clips))
+		return -EFAULT;
+	if (get_user(p, &up->clips))
+>>>>>>> a7eb1064741... [SQUASH]Merge Linux Stable 3.18.106
 		return -EFAULT;
 	return 0;
 }
