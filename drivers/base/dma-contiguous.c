@@ -555,3 +555,4 @@ int dma_contiguous_isolate(struct device *dev)
 	return 0;
 }
 #endif /* CMA_NO_MIGRATION */
+
