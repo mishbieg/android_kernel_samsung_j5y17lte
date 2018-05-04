@@ -466,8 +466,7 @@ static int do_fsync(unsigned int fd, int datasync)
 {
 	struct fd f = fdget(fd);
 	int ret = -EBADF;
-<<<<<<< HEAD
-=======
+
 #ifdef CONFIG_ASYNC_FSYNC
         struct fsync_work *fwork;
 #endif
@@ -476,7 +475,6 @@ static int do_fsync(unsigned int fd, int datasync)
 		return 0;
 
   f = fdget(fd);
->>>>>>> 82668a7c9... fs: fsync: add a toggle to enable or disable fsync() operations
 
 	if (f.file) {
 		ret = vfs_fsync(f.file, datasync);
