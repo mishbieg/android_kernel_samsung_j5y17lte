@@ -74,7 +74,7 @@ void __iomem *g3d1_outstanding_regs;
 /*  clk,vol,abb,min,max,down stay, pm_qos mem, pm_qos int, pm_qos cpu_kfc_min, pm_qos cpu_egl_max */
 static gpu_dvfs_info gpu_dvfs_table_default[] = {
 	{1300, 950000, 0, 99, 100, 1, 0, 902000, 400000, 1586000, CPU_MAX},
-	{1246, 905000, 0, 99, 100, 1, 0, 902000, 400000, 1586000, CPU_MAX},
+	{1246, 915000, 0, 99, 100, 1, 0, 902000, 400000, 1586000, CPU_MAX},
 	{1146, 890000, 0, 99, 100, 1, 0, 902000, 400000, 1586000, CPU_MAX},
 	{1001, 880000, 0, 99, 100, 1, 0, 902000, 400000, 1586000, CPU_MAX},
 	{845,  870000, 0, 78,  98, 1, 0, 836000, 400000, 1248000, CPU_MAX},
@@ -95,7 +95,7 @@ static int mif_min_table[] = {
 
 static gpu_attribute gpu_config_attributes[] = {
 	{GPU_MAX_CLOCK, 845},
-	{GPU_MAX_CLOCK_LIMIT, 1146},
+	{GPU_MAX_CLOCK_LIMIT, 1246},
 	{GPU_MIN_CLOCK, 343},
 	{GPU_MIN_CLOCK_LIMIT, 343},
 	{GPU_DVFS_START_CLOCK, 343},
@@ -113,7 +113,7 @@ static gpu_attribute gpu_config_attributes[] = {
 	{GPU_GOVERNOR_TABLE_SIZE_INTERACTIVE, GPU_DVFS_TABLE_LIST_SIZE(gpu_dvfs_table_default)},
 	{GPU_GOVERNOR_TABLE_SIZE_STATIC, GPU_DVFS_TABLE_LIST_SIZE(gpu_dvfs_table_default)},
 	{GPU_GOVERNOR_TABLE_SIZE_BOOSTER, GPU_DVFS_TABLE_LIST_SIZE(gpu_dvfs_table_default)},
-	{GPU_GOVERNOR_INTERACTIVE_HIGHSPEED_CLOCK, 728},
+	{GPU_GOVERNOR_INTERACTIVE_HIGHSPEED_CLOCK, 845},
 	{GPU_GOVERNOR_INTERACTIVE_HIGHSPEED_LOAD, 95},
 	{GPU_GOVERNOR_INTERACTIVE_HIGHSPEED_DELAY, 0},
 	{GPU_DEFAULT_VOLTAGE, 800000},
