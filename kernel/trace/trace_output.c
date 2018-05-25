@@ -1,4 +1,4 @@
-/*
+﻿/*
  * trace_output.c
  *
  * Copyright (C) 2008 Red Hat Inc, Steven Rostedt <srostedt@redhat.com>
@@ -973,7 +973,7 @@ static enum print_line_t trace_graph_ret_raw(struct trace_iterator *iter, int fl
 
 	trace_assign_type(field, iter->ent);
 
-	if (!trace_seq_printf(&iter->seq, "%lx %lld %lld %ld %d\n",
+		if (!trace_seq_printf(&iter->seq, "%lx %lld %lld %ld %d\n",
 			      field->ret.func,
 			      field->ret.calltime,
 			      field->ret.rettime,
